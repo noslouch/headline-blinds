@@ -4,7 +4,7 @@
 
 ### For use with a CMS of your choosing
 
-Let's say you have a quote you want to reveal in a fancy way. This repo should give you a way.
+Let's say you have a quote you want to reveal in a fancy way. This repo should give you that way.
 
 The markup structure is pretty straightforward. A header tag, `h1 - h6` wraps a series of `.rows`. Inside each `.row`, you'll find a `.blind` and a `span`. The `span` holds a line of text and the `.blind` acts as our mask.
 
