@@ -77,32 +77,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   bottom: 0;
 }
 
-/* line 21, ../../src/sass/main.scss */
+/* line 25, ../../src/sass/main.scss */
 .page {
   padding: 3em;
   display: table;
   height: 100%;
+  width: 1280px;
 }
 
-/* line 23, ../../src/sass/main.scss */
+/* line 32, ../../src/sass/main.scss */
 .loader {
   opacity: 0;
   margin-top: 1em;
   text-align: center;
 }
-/* line 27, ../../src/sass/main.scss */
+/* line 36, ../../src/sass/main.scss */
 .loader.begin {
   opacity: 1;
 }
 
-/* line 30, ../../src/sass/main.scss */
+/* line 39, ../../src/sass/main.scss */
 .container {
   position: relative;
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 36, ../../src/sass/main.scss */
+/* line 45, ../../src/sass/main.scss */
 .row {
   position: relative;
   font-size: 3em;
@@ -113,16 +114,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   min-height: 50px;
 }
 
-/* line 45, ../../src/sass/main.scss */
+/* line 54, ../../src/sass/main.scss */
 .blind {
   position: absolute;
   width: 100%;
   z-index: 5;
   height: 400%;
-  -webkit-transition: all 4000ms ease-out;
-  -moz-transition: all 4000ms ease-out;
-  -o-transition: all 4000ms ease-out;
-  transition: all 4000ms ease-out;
+  -webkit-transition: all 2000ms ease-out;
+  -moz-transition: all 2000ms ease-out;
+  -o-transition: all 2000ms ease-out;
+  transition: all 2000ms ease-out;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #ffffff));
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
@@ -130,7 +131,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
 }
 
-/* line 62, ../../src/sass/main.scss */
+/* line 71, ../../src/sass/main.scss */
 .opened {
   -webkit-transform: translateY(50%);
   -moz-transform: translateY(50%);
@@ -139,7 +140,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transform: translateY(50%);
 }
 
-/* line 68, ../../src/sass/main.scss */
+/* line 77, ../../src/sass/main.scss */
 .closed {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -149,7 +150,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @-webkit-keyframes blinds {
-  /* line 74, ../../src/sass/main.scss */
+  /* line 83, ../../src/sass/main.scss */
   from {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -158,7 +159,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     transform: translateY(0);
   }
 
-  /* line 78, ../../src/sass/main.scss */
+  /* line 87, ../../src/sass/main.scss */
   to {
     -webkit-transform: translateY(150%);
     -moz-transform: translateY(150%);

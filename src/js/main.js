@@ -1,3 +1,5 @@
+"use strict";
+
 var $loader = $('.loader')
 var container = document.getElementById('container')
 var A = {
@@ -20,12 +22,15 @@ var A = {
         this.open()
         this.index++
         if ( A.index > A.blinds.length - 1 ) return;
-        setTimeout(A.stagger.bind(A), 250)
+        setTimeout(A.stagger.bind(A), 100)
     }
 }
 
 function init(){
-    setTimeout(A.stagger.bind(A), 750)
+    setTimeout(A.stagger.bind(A), 500)
+    container.addEventListener('webkitTransitionEnd', againHandler)
+    container.addEventListener('transitionEnd', againHandler)
+    container.addEventListener('transitionend', againHandler)
 }
 
 function again(){
@@ -38,19 +43,15 @@ function again(){
     A.again = true
 }
 
-container.addEventListener('webkitTransitionEnd', againHandler)
-container.addEventListener('transitionEnd', againHandler)
-container.addEventListener('transitionend', againHandler)
 
 function againHandler(e){
     if (e.target === A.blinds[0] && A.again){
-        init()
+        setTimeout(A.stagger.bind(A), 100)
         A.again = false
     } else if ( e.target === A.blinds[A.blinds.length-1]) {
         $loader.removeClass('begin')
     } else { return }
 }
 
-init()
 
 $('#again').click(again)
