@@ -40,6 +40,7 @@
     position: relative;
     display: table-cell;
     vertical-align: middle;
+    width: 100%;
 }
 
 .row { 
@@ -56,35 +57,36 @@
     width: 100%;
     z-index: 5;
     height: 400%;
-    //background: white;
-    @include transition(all 2000ms linear);
+    @include transition(all 2000ms ease-out);
     @include background-image(linear-gradient(rgba(255,255,255,0), white 50%));
-    //@include animation-props(2.5s, blinds, infinite);
-    //@include rotate(180deg);
-    //@include transition(transform);
-    //@include rotateZ(180deg);
 }
 
-//.opened { opacity: 0; }
-//.closed { opacity: 1; }
 
 .opened {
-    //@include translateY(100%);
     @include translateY(50%);
-    //@include background-image(linear-gradient(rgba(255,255,255,0), white 100%));
 }
 
 .closed {
-    //@include translateY(0);
     @include translateY(-50%);
 }
 
-@-webkit-keyframes blinds {
-    from {
-        @include translateY(0);
-    }
-    
-    to {
-        @include translateY(150%);
-    }
+//               ________________
+//              |                |
+//              |                |
+//   h1.out <-  |     h1.in <-   |    <- h1.next
+//              |                |
+//              |________________|
+
+h1 {
+    position: absolute;
+    top: 0;
+    @include translate3d(0,0,0);
 }
+
+.in {
+    
+}
+
+.out {}
+
+.next{}
