@@ -117,40 +117,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 55, ../../src/sass/main.scss */
 .blind {
-  position: absolute;
-  width: 100%;
-  z-index: 5;
-  height: 400%;
-  -webkit-transition: all 2000ms ease-out;
-  -moz-transition: all 2000ms ease-out;
-  -o-transition: all 2000ms ease-out;
-  transition: all 2000ms ease-out;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #ffffff));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
-  background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
+  -webkit-transition: opacity 250ms ease-out;
+  -moz-transition: opacity 250ms ease-out;
+  -o-transition: opacity 250ms ease-out;
+  transition: opacity 250ms ease-out;
 }
 
 /* line 65, ../../src/sass/main.scss */
 .opened {
-  -webkit-transform: translateY(50%);
-  -moz-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  -o-transform: translateY(50%);
-  transform: translateY(50%);
+  opacity: 1;
 }
 
-/* line 69, ../../src/sass/main.scss */
+/* line 70, ../../src/sass/main.scss */
 .closed {
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+  opacity: 0;
 }
 
-/* line 80, ../../src/sass/main.scss */
+/* line 82, ../../src/sass/main.scss */
 h1 {
   position: absolute;
   top: 0;

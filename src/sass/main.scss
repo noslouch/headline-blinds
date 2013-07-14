@@ -53,21 +53,23 @@
     min-height: 50px;
 }
 .blind {
-    position: absolute;
-    width: 100%;
-    z-index: 5;
-    height: 400%;
-    @include transition(all 2000ms ease-out);
-    @include background-image(linear-gradient(rgba(255,255,255,0), white 50%));
+    //position: absolute;
+    //width: 100%;
+    //z-index: 5;
+    //height: 400%;
+    @include transition(opacity 250ms ease-out);
+    //@include background-image(linear-gradient(rgba(255,255,255,0), white 50%));
 }
 
 
 .opened {
-    @include translateY(50%);
+    //@include translateY(50%);
+    opacity: 1;
 }
 
 .closed {
-    @include translateY(-50%);
+    //@include translateY(-50%);
+    opacity: 0;
 }
 
 //               ________________
