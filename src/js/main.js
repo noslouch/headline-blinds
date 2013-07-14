@@ -46,7 +46,7 @@ function againHandler(e){
     if (e.target === A.blinds[0] && A.again){
         init()
         A.again = false
-    } else if ( e.target === A.blinds[3]) {
+    } else if ( e.target === A.blinds[A.blinds.length-1]) {
         $loader.removeClass('begin')
     } else { return }
 }

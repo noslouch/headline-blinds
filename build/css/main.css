@@ -109,9 +109,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   overflow: hidden;
   line-height: 1.2;
   font-family: "Helvetica Neue", arial, sans-serif;
+  font-weight: 600;
+  min-height: 50px;
 }
 
-/* line 43, ../../src/sass/main.scss */
+/* line 45, ../../src/sass/main.scss */
 .blind {
   position: absolute;
   width: 100%;
@@ -128,7 +130,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
 }
 
-/* line 60, ../../src/sass/main.scss */
+/* line 62, ../../src/sass/main.scss */
 .opened {
   -webkit-transform: translateY(50%);
   -moz-transform: translateY(50%);
@@ -137,7 +139,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transform: translateY(50%);
 }
 
-/* line 66, ../../src/sass/main.scss */
+/* line 68, ../../src/sass/main.scss */
 .closed {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -147,7 +149,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @-webkit-keyframes blinds {
-  /* line 72, ../../src/sass/main.scss */
+  /* line 74, ../../src/sass/main.scss */
   from {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -156,7 +158,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     transform: translateY(0);
   }
 
-  /* line 76, ../../src/sass/main.scss */
+  /* line 78, ../../src/sass/main.scss */
   to {
     -webkit-transform: translateY(150%);
     -moz-transform: translateY(150%);
