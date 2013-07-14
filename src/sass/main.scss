@@ -57,7 +57,7 @@
     z-index: 5;
     height: 400%;
     //background: white;
-    @include transition(all 2000ms ease-out);
+    @include transition(all 2000ms linear);
     @include background-image(linear-gradient(rgba(255,255,255,0), white 50%));
     //@include animation-props(2.5s, blinds, infinite);
     //@include rotate(180deg);
