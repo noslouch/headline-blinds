@@ -120,10 +120,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 100%;
   z-index: 5;
   height: 400%;
-  -webkit-transition: all 2000ms ease-out;
-  -moz-transition: all 2000ms ease-out;
-  -o-transition: all 2000ms ease-out;
-  transition: all 2000ms ease-out;
+  -webkit-transition: all 2000ms linear;
+  -moz-transition: all 2000ms linear;
+  -o-transition: all 2000ms linear;
+  transition: all 2000ms linear;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #ffffff));
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
