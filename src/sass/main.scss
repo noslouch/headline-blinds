@@ -2,6 +2,11 @@
 @import "compass/css3/images";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+@import "compass/css3/box-sizing";
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
 
 @mixin animation-props($duration, $name, $count){
     -webkit-animation-duration: $duration;
@@ -13,7 +18,15 @@
 }
 
 .wrapper { position: absolute; top: 0; bottom: 0; }
-.page { padding: 1em; display: table; height: 100%; }
+.page { padding: 3em; display: table; height: 100%; }
+
+.loader {
+    opacity: 0;
+    margin-top: 1em;
+    text-align: center;
+    &.begin { opacity: 1;}
+}
+
 .container {
     position: relative;
     display: table-cell;

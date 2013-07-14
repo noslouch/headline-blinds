@@ -63,28 +63,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 15, ../../src/sass/main.scss */
+/* line 7, ../../src/sass/main.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../../src/sass/main.scss */
 .wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
 }
 
-/* line 16, ../../src/sass/main.scss */
+/* line 21, ../../src/sass/main.scss */
 .page {
-  padding: 1em;
+  padding: 3em;
   display: table;
   height: 100%;
 }
 
-/* line 17, ../../src/sass/main.scss */
+/* line 23, ../../src/sass/main.scss */
+.loader {
+  opacity: 0;
+  margin-top: 1em;
+  text-align: center;
+}
+/* line 27, ../../src/sass/main.scss */
+.loader.begin {
+  opacity: 1;
+}
+
+/* line 30, ../../src/sass/main.scss */
 .container {
   position: relative;
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 23, ../../src/sass/main.scss */
+/* line 36, ../../src/sass/main.scss */
 .row {
   position: relative;
   font-size: 3em;
@@ -93,7 +111,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "Helvetica Neue", arial, sans-serif;
 }
 
-/* line 30, ../../src/sass/main.scss */
+/* line 43, ../../src/sass/main.scss */
 .blind {
   position: absolute;
   width: 100%;
@@ -110,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
 }
 
-/* line 47, ../../src/sass/main.scss */
+/* line 60, ../../src/sass/main.scss */
 .opened {
   -webkit-transform: translateY(50%);
   -moz-transform: translateY(50%);
@@ -119,7 +137,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transform: translateY(50%);
 }
 
-/* line 53, ../../src/sass/main.scss */
+/* line 66, ../../src/sass/main.scss */
 .closed {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -129,7 +147,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @-webkit-keyframes blinds {
-  /* line 59, ../../src/sass/main.scss */
+  /* line 72, ../../src/sass/main.scss */
   from {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -138,7 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     transform: translateY(0);
   }
 
-  /* line 63, ../../src/sass/main.scss */
+  /* line 76, ../../src/sass/main.scss */
   to {
     -webkit-transform: translateY(150%);
     -moz-transform: translateY(150%);
