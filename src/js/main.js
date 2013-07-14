@@ -27,7 +27,7 @@ var A = {
 }
 
 function init(){
-    setTimeout(A.stagger.bind(A), 500)
+    setTimeout(A.stagger.bind(A), 250)
     container.addEventListener('webkitTransitionEnd', againHandler)
     container.addEventListener('transitionEnd', againHandler)
     container.addEventListener('transitionend', againHandler)
