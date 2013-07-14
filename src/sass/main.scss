@@ -17,8 +17,17 @@
     -moz-animation-iteration-count: $count;
 }
 
-.wrapper { position: absolute; top: 0; bottom: 0; }
-.page { padding: 3em; display: table; height: 100%; }
+.wrapper { 
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+ }
+.page {
+    padding: 3em;
+    display: table;
+    height: 100%;
+    width: 1280px;
+ }
 
 .loader {
     opacity: 0;
@@ -48,7 +57,7 @@
     z-index: 5;
     height: 400%;
     //background: white;
-    @include transition(all 4000ms ease-out);
+    @include transition(all 2000ms ease-out);
     @include background-image(linear-gradient(rgba(255,255,255,0), white 50%));
     //@include animation-props(2.5s, blinds, infinite);
     //@include rotate(180deg);

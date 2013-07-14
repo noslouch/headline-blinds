@@ -22,12 +22,12 @@ var A = {
         this.open()
         this.index++
         if ( A.index > A.blinds.length - 1 ) return;
-        setTimeout(A.stagger.bind(A), 250)
+        setTimeout(A.stagger.bind(A), 100)
     }
 }
 
 function init(){
-    setTimeout(A.stagger.bind(A), 750)
+    setTimeout(A.stagger.bind(A), 500)
     container.addEventListener('webkitTransitionEnd', againHandler)
     container.addEventListener('transitionEnd', againHandler)
     container.addEventListener('transitionend', againHandler)
