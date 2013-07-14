@@ -1,0 +1,149 @@
+/* line 17, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 15, ../../src/sass/main.scss */
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 16, ../../src/sass/main.scss */
+.page {
+  padding: 1em;
+  display: table;
+  height: 100%;
+}
+
+/* line 17, ../../src/sass/main.scss */
+.container {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 23, ../../src/sass/main.scss */
+.row {
+  position: relative;
+  font-size: 3em;
+  overflow: hidden;
+  line-height: 1.2;
+  font-family: "Helvetica Neue", arial, sans-serif;
+}
+
+/* line 30, ../../src/sass/main.scss */
+.blind {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  height: 400%;
+  -webkit-transition: all 4000ms ease-out;
+  -moz-transition: all 4000ms ease-out;
+  -o-transition: all 4000ms ease-out;
+  transition: all 4000ms ease-out;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #ffffff));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff 50%);
+}
+
+/* line 47, ../../src/sass/main.scss */
+.opened {
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+/* line 53, ../../src/sass/main.scss */
+.closed {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@-webkit-keyframes blinds {
+  /* line 59, ../../src/sass/main.scss */
+  from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 63, ../../src/sass/main.scss */
+  to {
+    -webkit-transform: translateY(150%);
+    -moz-transform: translateY(150%);
+    -ms-transform: translateY(150%);
+    -o-transform: translateY(150%);
+    transform: translateY(150%);
+  }
+}
