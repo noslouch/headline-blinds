@@ -77,7 +77,7 @@ module.exports = function(grunt) {
       },
       dev: {
         files: ['src/**/*', 'index.html'],
-        tasks : ['compass'],
+        tasks : ['compass', 'jshint:src'],
       }
     },
   });

@@ -5,7 +5,7 @@
  * Copyright (c) 2013 noSlouch
  * Licensed under the MIT license.
  */
-
+"use strict";
 (function($) {
 
   // Collection method.
