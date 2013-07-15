@@ -22,7 +22,7 @@ var A = {
         this.open()
         this.index++
         if ( A.index > A.blinds.length - 1 ) return;
-        setTimeout(A.stagger.bind(A), 100)
+        setTimeout(A.stagger.bind(A), 110)
     }
 }
 
