@@ -87,48 +87,6 @@ Slide.prototype.getNext = function(){
     return next
 }
 
-function animate(){
-    var slide;
-    var nextSlide;
-
-    function tracker(){
-        for (var i = 0; i < slides.length; i++){
-            if ( slides[i].isOpen() ) {
-                slide = slides[i]
-                nextSlide = slides[i+1]
-                break
-            }
-        }
-        slide = slide || slides[0]
-        return
-    }
-                    
-    function go(){
-        tracker()
-        if ( nextSlide === undefined ) { // first run case
-            slide.staggerOpen()
-            setTimeout(go, 5000)
-            return
-        }
-        slide.staggerClose()
-        setTimeout(nextSlide.staggerOpen, 2500)
-        setTimeout(go, 7500)
-    }
-    setTimeout(go, 500)
-}
-
-function restart(e){
-    console.log(e.target)
-    console.log(e.target === slides)
-}
-
-/*
- * at the end of a slide transition:
- * close it if it's open,
- * open it if it's closed,
- * and kick off next slide after an interval
-*/
-
 function animationHandler(e){
     var slide = Slide.prototype.getCurrent(),
         next = Slide.prototype.getNext(),
@@ -136,12 +94,12 @@ function animationHandler(e){
         blind = e.target
 
     if (blind === lastBlind && $(lastBlind).hasClass('opened')) {
-        slide.staggerClose()
+        setTimeout(slide.staggerClose, 2000)
         try {
-            animation = setTimeout(next.staggerOpen, 2500)
+            animation = setTimeout(next.staggerOpen, 4500)
         } catch(e) {
             next = Slide.prototype.slides[0]
-            animation = setTimeout(next.staggerOpen, 2500)
+            animation = setTimeout(next.staggerOpen, 4500)
         }
 
     }
