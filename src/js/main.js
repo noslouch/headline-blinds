@@ -55,3 +55,8 @@ function againHandler(e){
 
 
 $('#again').click(again)
+
+$(function(){
+    //$fadeSlider = $('#duration')
+    //$fadeText = $('#durationText')
+})

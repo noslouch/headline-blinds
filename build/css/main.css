@@ -117,10 +117,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 55, ../../src/sass/main.scss */
 .blind {
-  -webkit-transition: opacity 1000ms ease-out;
-  -moz-transition: opacity 1000ms ease-out;
-  -o-transition: opacity 1000ms ease-out;
-  transition: opacity 1000ms ease-out;
+  -webkit-transition: opacity 2000ms ease-out;
+  -moz-transition: opacity 2000ms ease-out;
+  -o-transition: opacity 2000ms ease-out;
+  transition: opacity 2000ms ease-out;
 }
 
 /* line 65, ../../src/sass/main.scss */
