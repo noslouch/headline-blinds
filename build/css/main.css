@@ -80,55 +80,88 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 25, ../../src/sass/main.scss */
 .page {
   padding: 3em;
-  display: table;
   height: 100%;
   width: 1280px;
 }
 
 /* line 32, ../../src/sass/main.scss */
-.loader {
-  opacity: 0;
-  margin-top: 1em;
-  text-align: center;
-}
-/* line 36, ../../src/sass/main.scss */
-.loader.begin {
-  opacity: 1;
-}
-
-/* line 39, ../../src/sass/main.scss */
 .container {
   position: relative;
-  display: table-cell;
-  vertical-align: middle;
   width: 100%;
+  height: 100%;
+}
+
+/* line 38, ../../src/sass/main.scss */
+.slide {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 /* line 46, ../../src/sass/main.scss */
-.row {
-  position: relative;
+h1 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 51, ../../src/sass/main.scss */
+.blind {
   font-size: 3em;
-  overflow: hidden;
-  line-height: 1.2;
   font-family: "Helvetica Neue", arial, sans-serif;
   font-weight: 600;
   min-height: 50px;
-}
-
-/* line 55, ../../src/sass/main.scss */
-.blind {
   -webkit-transition: opacity 2000ms ease-out;
   -moz-transition: opacity 2000ms ease-out;
   -o-transition: opacity 2000ms ease-out;
   transition: opacity 2000ms ease-out;
 }
 
-/* line 65, ../../src/sass/main.scss */
+/* line 60, ../../src/sass/main.scss */
 .opened {
   opacity: 1;
 }
 
-/* line 70, ../../src/sass/main.scss */
+/* line 65, ../../src/sass/main.scss */
 .closed {
   opacity: 0;
+}
+
+/* line 70, ../../src/sass/main.scss */
+.loader {
+  opacity: 0;
+  margin-top: 1em;
+  text-align: center;
+}
+/* line 74, ../../src/sass/main.scss */
+.loader.begin {
+  opacity: 1;
+}
+
+/* line 85, ../../src/sass/main.scss */
+.next {
+  -webkit-transform: translate3d(200%, 0, 0);
+  -moz-transform: translate3d(200%, 0, 0);
+  -ms-transform: translate3d(200%, 0, 0);
+  -o-transform: translate3d(200%, 0, 0);
+  transform: translate3d(200%, 0, 0);
+}
+
+/* line 88, ../../src/sass/main.scss */
+.in {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 92, ../../src/sass/main.scss */
+.out {
+  -webkit-transform: translate3d(-200%, 0, 0);
+  -moz-transform: translate3d(-200%, 0, 0);
+  -ms-transform: translate3d(-200%, 0, 0);
+  -o-transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
 }
