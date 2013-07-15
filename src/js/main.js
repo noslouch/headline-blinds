@@ -56,7 +56,37 @@ function againHandler(e){
 
 $('#again').click(again)
 
+function valueSwap($input1, $input2){
+    $input1.change(function(e){
+        $input2.val(e.target.value)
+    })
+    $input2.change(function(e){
+        $input1.val(e.target.value)
+    })
+
+}
+
 $(function(){
-    //$fadeSlider = $('#duration')
-    //$fadeText = $('#durationText')
+    var $fadeSlider = $('#duration'),
+        $fadeText = $('#durationText'),
+        $fade = $($fadeSlider, $fadeText),
+        $staggerSlider = $('#stagger'),
+        $staggerText = $('#staggerText'),
+        $stagger = $($staggerText, $staggerSlider),
+        $controls = $('#controls')
+
+    $fadeText.val($fadeSlider.val())
+    $staggerText.val($staggerSlider.val())
+    
+    valueSwap($fadeSlider, $fadeText)
+    valueSwap($staggerSlider, $staggerText)
+    
+    $controls.on('change', $fade, function(e){ 
+        $(A.blinds).css({
+            webkitTransitionDuration : e.target.value + 'ms',
+            mozTransitionDuration : e.target.value + 'ms',
+            transitionDuration : e.target.value + 'ms'
+        })
+    })
+
 })
